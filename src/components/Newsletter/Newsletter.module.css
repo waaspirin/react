@@ -1,0 +1,91 @@
+.section {
+    padding: 48px 80px;
+    background: #eef2ff;
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.copy h2 {
+    margin-bottom: 12px;
+    color: #242628;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.copy p {
+    max-width: 480px;
+    color: #777b81;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.form { min-width: 0; }
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #242628;
+    font-size: 11px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controls input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #e5e6e8;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #242628;
+    font-size: 13px;
+}
+
+.controls input:focus { border-color: #315de8; }
+.controls input::placeholder { color: #777b81; }
+
+.controls button {
+    flex: 0 0 auto;
+    height: 48px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #315de8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.controls button:hover { background: #2448c4; }
+
+.form > p {
+    margin-top: 10px;
+    color: #777b81;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .section { padding: 40px 32px; }
+    .inner { gap: 32px; }
+}
+
+@media (max-width: 650px) {
+    .section { padding: 36px 16px; }
+    .inner { grid-template-columns: 1fr; gap: 24px; }
+    .copy h2 { font-size: 24px; }
+    .controls { flex-direction: column; }
+    .controls button { width: 100%; }
+}
