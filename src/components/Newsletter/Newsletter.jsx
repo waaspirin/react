@@ -1,9 +1,6 @@
 import s from "./Newsletter.module.css";
 
 export function Newsletter() {
-    function handleSubmit(event) {
-        event.preventDefault();
-    }
 
     return (
         <section className={s.section}>
@@ -12,7 +9,7 @@ export function Newsletter() {
                     <h2>Хорошие новости — рядом</h2>
                     <p>Новинки, полезные подборки и специальные предложения. Без лишних писем.</p>
                 </div>
-                <form className={s.form} onSubmit={handleSubmit}>
+                <form className={s.form}>
                     <label htmlFor="newsletter-email">Ваш email</label>
                     <div className={s.controls}>
                         <input id="newsletter-email" type="email" placeholder="example@mail.ru" required />

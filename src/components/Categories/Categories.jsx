@@ -1,33 +1,58 @@
-import { figmaAssets } from "../../assets/figmaAssets";
-import s from "./Categories.module.css";
 
-const categories = [
-    { title: "Для дома", subtitle: "Уют в деталях", image: figmaAssets.lamp, alt: "Настольная лампа" },
-    { title: "Электроника", subtitle: "В своём ритме", image: figmaAssets.headphones, alt: "Наушники" },
-    { title: "Аксессуары", subtitle: "Всегда с собой", image: figmaAssets.backpack, alt: "Городской рюкзак" },
-    { title: "Спорт и отдых", subtitle: "Больше движения", image: figmaAssets.bottle, alt: "Бутылка для воды" },
-];
+import s from "./Categories.module.css";
+import arrow from "../../assets/arrow.svg"
+import lamp2 from "../../assets/lamp2.png"
+
 
 export function Categories() {
     return (
         <section className={s.section} id="categories">
             <div className={s.heading}>
                 <h2>Что вы ищете сегодня?</h2>
-                <a href="#catalog">Все категории <img src={figmaAssets.arrowRightBlue} alt="" /></a>
+                <a href="#catalog">Все категории <img src={arrow} alt="" /></a>
             </div>
             <div className={s.grid}>
-                {categories.map((category) => (
-                    <a href="#catalog" className={s.card} key={category.title}>
+               
+                    <a href="#catalog" className={s.card}>
                         <span className={s.text}>
-                            <strong>{category.title}</strong>
-                            <span>{category.subtitle}</span>
-                            <img className={s.arrow} src={figmaAssets.arrowRightBlue} alt="" />
+                            <strong>Для дома</strong>
+                            <span>Уют в деталях</span>
+                            <img className={s.arrow} src={arrow} alt="" />
                         </span>
                         <span className={s.image}>
-                            <img src={category.image} alt={category.alt} />
+                            <img src={lamp2} />
                         </span>
                     </a>
-                ))}
+                    <a href="#catalog" className={s.card}>
+                        <span className={s.text}>
+                            <strong>Для дома</strong>
+                            <span>Уют в деталях</span>
+                            <img className={s.arrow} src={arrow} alt="" />
+                        </span>
+                        <span className={s.image}>
+                            <img src={lamp2} />
+                        </span>
+                    </a>
+                    <a href="#catalog" className={s.card}>
+                        <span className={s.text}>
+                            <strong>Для дома</strong>
+                            <span>Уют в деталях</span>
+                            <img className={s.arrow} src={arrow} alt="" />
+                        </span>
+                        <span className={s.image}>
+                            <img src={lamp2} />
+                        </span>
+                    </a>
+                    <a href="#catalog" className={s.card}>
+                        <span className={s.text}>
+                            <strong>Для дома</strong>
+                            <span>Уют в деталях</span>
+                            <img className={s.arrow} src={arrow} alt="" />
+                        </span>
+                        <span className={s.image}>
+                            <img src={lamp2} />
+                        </span>
+                    </a>
             </div>
         </section>
     );

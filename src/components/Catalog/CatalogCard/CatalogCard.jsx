@@ -1,6 +1,7 @@
-import { figmaAssets } from "../../../assets/figmaAssets";
+
 import s from "./CatalogCard.module.css";
 import productImg from "../../../assets/productImg.png"
+import plus from "../../../assets/plus.svg"
 export function CatalogCard() {
     return (
         <article className={s.card}>
@@ -12,7 +13,7 @@ export function CatalogCard() {
             <div className={s.bottom}>
                 <span className={s.price}>3 490 ₽</span>
                 <button type="button" className={s.add}>
-                    <img src={figmaAssets.plus} alt="" />
+                    <img src={plus} alt="" />
                 </button>
             </div>
         </article>

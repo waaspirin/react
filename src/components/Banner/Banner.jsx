@@ -1,11 +1,8 @@
-import { figmaAssets } from "../../assets/figmaAssets";
-import s from "./Banner.module.css";
 
-const benefits = [
-    { icon: figmaAssets.truck, title: "Доставка по всей России", text: "Бесплатно при заказе от 5 000 ₽" },
-    { icon: figmaAssets.shieldCheck, title: "Качество без компромиссов", text: "Проверяем каждую вещь сами" },
-    { icon: figmaAssets.rotateCcw, title: "Легко вернуть", text: "14 дней, чтобы передумать" },
-];
+import s from "./Banner.module.css";
+import  truck  from "../../assets/truck.svg"
+import  arrow from "../../assets/arrow.svg"
+import banner from "../../assets/banner.svg"
 
 export function Banner() {
     return (
@@ -19,26 +16,43 @@ export function Banner() {
                     </p>
                     <a href="#catalog" className={s.button}>
                         Перейти в каталог
-                        <img src={figmaAssets.arrowRight} alt="" />
+                        <img src={arrow} alt="" />
                     </a>
                 </div>
                 <div className={s.heroImage}>
-                    <img src={figmaAssets.hero} alt="Уютная гостиная с креслом и настольной лампой" />
+                    <img src={banner} />
                 </div>
             </div>
 
             <div className={s.benefits} id="advantages">
-                {benefits.map((benefit) => (
-                    <div className={s.benefit} key={benefit.title}>
-                        <span className={s.benefitIcon}>
-                            <img src={benefit.icon} alt="" />
-                        </span>
-                        <span className={s.benefitText}>
-                            <strong>{benefit.title}</strong>
-                            <span>{benefit.text}</span>
-                        </span>
-                    </div>
-                ))}
+                <div className={s.benefit}>
+                    <span className={s.benefitIcon}>
+                        <img src={truck} alt="" />
+                    </span>
+                    <span className={s.benefitText}>
+                        <strong>Доставка по всей России</strong>
+                        <span>Бесплатно при заказе от 5 000 ₽</span>
+                    </span>
+                </div>
+                <div className={s.benefit}>
+                    <span className={s.benefitIcon}>
+                        <img src={truck} alt="" />
+                    </span>
+                    <span className={s.benefitText}>
+                        <strong>Доставка по всей России</strong>
+                        <span>Бесплатно при заказе от 5 000 ₽</span>
+                    </span>
+                </div>
+                <div className={s.benefit}>
+                    <span className={s.benefitIcon}>
+                        <img src={truck} alt="" />
+                    </span>
+                    <span className={s.benefitText}>
+                        <strong>Доставка по всей России</strong>
+                        <span>Бесплатно при заказе от 5 000 ₽</span>
+                    </span>
+                </div>
+
             </div>
         </section>
     );
