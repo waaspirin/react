@@ -1,0 +1,411 @@
+
+.page {
+    min-height: 100vh;
+    color: #292929;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 55px;
+    padding: 0 7.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #292929;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.logo span {
+    padding: 4px;
+    color: white;
+    background: #365cf5;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.nav,
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav a {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.nav .active {
+    color: #365cf5;
+    border-bottom: 2px solid #365cf5;
+}
+
+.nav small {
+    margin-left: 4px;
+    padding: 3px 6px;
+    color: #365cf5;
+    background: #edf0ff;
+    border-radius: 50%;
+}
+
+.actions {
+    gap: 18px;
+}
+
+.actions span {
+    font-size: 23px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    margin: 24px 0;
+    color: #858585;
+    font-size: 12px;
+}
+
+.container h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+.subtitle {
+    margin: 0 0 30px;
+    color: #858585;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 30px;
+}
+
+.sidebar {
+    padding: 20px;
+    height: fit-content;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    margin: 0 0 16px;
+    font-size: 16px;
+}
+
+.sidebar > a {
+    display: block;
+    margin-bottom: 17px;
+    color: #666;
+    text-decoration: none;
+}
+
+.sidebar .categoryActive {
+    color: #365cf5;
+}
+
+.filter {
+    margin-top: 28px;
+}
+
+.priceInputs {
+    display: flex;
+    gap: 8px;
+}
+
+.priceInputs input {
+    width: 50%;
+    min-width: 0;
+    padding: 9px 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filterButton {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    color: white;
+    background: #365cf5;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.catalogTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #858585;
+    font-size: 12px;
+}
+
+.catalogTop select {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+}
+
+.image {
+    position: relative;
+    display: block;
+    height: 210px;
+    overflow: hidden;
+    background: #eee9e1;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 9px;
+    background: white;
+    border-radius: 5px;
+    color: #333;
+    font-size: 11px;
+}
+
+.cardInfo {
+    padding: 15px;
+}
+
+.category {
+    color: #858585;
+    font-size: 12px;
+}
+
+.cardInfo h3 {
+    min-height: 38px;
+    margin: 9px 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.rating span {
+    color: #365cf5;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.rating small {
+    color: #858585;
+    font-size: 11px;
+}
+
+.cardBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.cardBottom strong {
+    font-size: 18px;
+}
+
+.cardBottom button {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 5px;
+    background: #365cf5;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 35px 0;
+}
+
+.pagination button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.pagination .currentPage {
+    color: white;
+    background: #365cf5;
+    border-color: #365cf5;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 7.5%;
+    color: #777;
+    background: #f7f7f5;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 90%;
+    }
+
+    .content {
+        grid-template-columns: 180px 1fr;
+        gap: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 5%;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav a {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .actions {
+        gap: 10px;
+    }
+
+    .container h1 {
+        font-size: 25px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .sidebar > a {
+        display: inline-block;
+        margin: 0 12px 10px 0;
+    }
+
+    .filter {
+        margin-top: 15px;
+    }
+
+    .priceInputs {
+        max-width: 250px;
+    }
+
+    .filterButton {
+        max-width: 250px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .image {
+        height: 155px;
+    }
+
+    .cardInfo {
+        padding: 10px;
+    }
+
+    .cardInfo h3 {
+        font-size: 13px;
+    }
+
+    .cardBottom strong {
+        font-size: 15px;
+    }
+
+    .catalogTop {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        height: 220px;
+    }
+}

@@ -1,25 +1,27 @@
 import user from "../../assets/user.svg"
 import s from "./Header.module.css";
 import logo2 from "../../assets/logo2.svg"
+import { Link } from "react-router";
+import { PATH } from "../../routing/Routing";
 
 export function Header() {
     return (
         <header className={s.header}>
             <div className={s.inner}>
-                <a href="#top" className={s.brand} aria-label="Рядом — главная">
+                <Link to={PATH.Home} className={s.brand} aria-label="Рядом — главная">
                     <span className={s.brandIcon}>
                         <img src={logo2} alt="" />
                     </span>
                     <span>рядом</span>
-                </a>
+                </Link>
 
                 <nav className={s.nav} aria-label="Основная навигация">
-                    <a href="#top" className={s.active}>Главная</a>
-                    <a href="#catalog">Каталог</a>
-                    <a href="#footer" className={s.cartLink}>Корзина <span>3</span></a>
+                    <Link to={PATH.Home} className={s.active}>Главная</Link>
+                    <Link to={PATH.Catalog}>Каталог</Link>
+                    <Link to={PATH.NotFound}  className={s.cartLink}>Корзина <span>3</span></Link>
                 </nav>
 
-                <a href="#login" className={s.login}>
+                <a href="" className={s.login}>
                     <img src={user} alt="" />
                     <span>Войти</span>
                 </a>
