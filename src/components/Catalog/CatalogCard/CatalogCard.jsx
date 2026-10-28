@@ -1,23 +1,36 @@
-
 import s from "./CatalogCard.module.css";
-import productImg from "../../../assets/productImg.png"
-import plus from "../../../assets/plus.svg"
+import plus from "../../../assets/plus.svg";
 import { Link } from "react-router";
-import { PATH } from "../../../routing/Routing";
-export function CatalogCard() {
+
+export function CatalogCard({ product }) {
     return (
         <article className={s.card}>
-            <a href="#catalog" className={s.imageLink}>
-                <img className={s.image} src={productImg} alt="" />
-            </a>
+            <Link
+                to={`/product/${product.id}`}
+                className={s.imageLink}
+            >
+                <img
+                    className={s.image}
+                    src={product.image}
+                    alt={product.title}
+                />
+            </Link>
+
             <p className={s.category}>Для дома</p>
-            <h3 className={s.title}>Настольная лампа «Линия»</h3>
+
+            <h3 className={s.title}>
+                {product.title}
+            </h3>
+
             <div className={s.bottom}>
-                <span className={s.price}>3 490 ₽</span>
-                <Link to={PATH.Product}>
-                <button type="button" className={s.add}>
-                    <img src={plus} alt="" />
-                </button>
+                <span className={s.price}>
+                    {product.price} ₽
+                </span>
+
+                <Link to={`/product/${product.id}`}>
+                    <button type="button" className={s.add}>
+                        <img src={plus} alt="" />
+                    </button>
                 </Link>
             </div>
         </article>
