@@ -73,7 +73,7 @@ export function ProductPage() {
                         ></button>
 
                         <div className={styles.price}>
-                            {product.price.toLocaleString("ru-RU")} ₽
+                            {product.price} ₽
                         </div>
 
                         <div className={styles.buttons}>

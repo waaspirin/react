@@ -1,6 +1,14 @@
 import styles from "../CatalogPage/CatalogPage.module.css"
 import { Catalog } from "../../components/Catalog/Catalog"
 
+const categories = [
+    { id: 1, title: "Все товары" },
+    { id: 2, title: "Для дома" },
+    { id: 3, title: "Спорт и отдых" },
+    { id: 4, title: "Электроника" },
+    { id: 5, title: "Аксессуары" },
+];
+
 export function CatalogPage(){
     return(
      <main className={styles.container}>
@@ -16,11 +24,17 @@ export function CatalogPage(){
                 <div className={styles.content}>
                     <aside className={styles.sidebar}>
                         <h3>Категории</h3>
-                        <a href="#" className={styles.categoryActive}>Все товары</a>
-                        <a href="#">Освещение</a>
-                        <a href="#">Для кухни</a>
-                        <a href="#">Для спальни</a>
-                        <a href="#">Декор</a>
+                        {categories.map((category) => (
+                            <a
+                                href="#"
+                                key={category.id}
+                                className={
+                                    category.id === 1 ? styles.categoryActive : ""
+                                }
+                            >
+                                {category.title}
+                            </a>
+))}
 
                         <div className={styles.filter}>
                             <h3>Цена, ₽</h3>

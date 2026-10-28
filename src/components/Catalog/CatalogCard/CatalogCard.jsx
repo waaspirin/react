@@ -16,7 +16,7 @@ export function CatalogCard({ product }) {
                 />
             </Link>
 
-            <p className={s.category}>Для дома</p>
+            <p className={s.category}>{product.category}</p>
 
             <h3 className={s.title}>
                 {product.title}
